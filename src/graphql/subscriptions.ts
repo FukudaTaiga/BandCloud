@@ -11,6 +11,7 @@ export const onCreateStudioTable = /* GraphQL */ `
       group
       id
       name
+      number_rooms
       phone
       station
       time
@@ -32,6 +33,7 @@ export const onUpdateStudioTable = /* GraphQL */ `
       group
       id
       name
+      number_rooms
       phone
       station
       time
@@ -53,6 +55,7 @@ export const onDeleteStudioTable = /* GraphQL */ `
       group
       id
       name
+      number_rooms
       phone
       station
       time

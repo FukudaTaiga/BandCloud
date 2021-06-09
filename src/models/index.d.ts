@@ -11,6 +11,7 @@ export declare class StudioTable {
   readonly fee?: string;
   readonly group?: string;
   readonly name?: string;
+  readonly number_rooms?: string;
   readonly phone?: string;
   readonly station?: string;
   readonly time?: string;

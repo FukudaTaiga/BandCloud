@@ -5,6 +5,7 @@ type StudioTable @model {
   group: String
   id: ID!
   name: String
+  number_rooms: String
   phone: String
   station: String
   time: String

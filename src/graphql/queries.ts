@@ -22,6 +22,7 @@ export const syncStudioTables = /* GraphQL */ `
         group
         id
         name
+        number_rooms
         phone
         station
         time
@@ -46,6 +47,7 @@ export const getStudioTable = /* GraphQL */ `
       group
       id
       name
+      number_rooms
       phone
       station
       time
@@ -72,6 +74,7 @@ export const listStudioTables = /* GraphQL */ `
         group
         id
         name
+        number_rooms
         phone
         station
         time
