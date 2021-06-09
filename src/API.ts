@@ -2,60 +2,52 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateStudioInput = {
+export type CreateStudioTableInput = {
   address?: string | null,
   erea?: Array< string | null > | null,
   fee?: string | null,
   group?: string | null,
+  id?: string | null,
   name?: string | null,
-  number_rooms?: string | null,
   phone?: string | null,
   station?: string | null,
   time?: string | null,
   url?: string | null,
+  _version?: number | null,
 };
 
-export type Studio = {
-  __typename: "Studio",
-  address?: string | null,
-  erea?: Array< string | null > | null,
-  fee?: string | null,
-  group?: string | null,
-  id?: string,
-  name?: string | null,
-  number_rooms?: string | null,
-  phone?: string | null,
-  station?: string | null,
-  time?: string | null,
-  url?: string | null,
-};
-
-export type ModelTodoConditionInput = {
-  and?: Array< ModelTodoConditionInput | null > | null,
-  description?: ModelStringInput | null,
+export type ModelStudioTableConditionInput = {
+  address?: ModelStringInput | null,
+  erea?: ModelStringInput | null,
+  fee?: ModelStringInput | null,
+  group?: ModelStringInput | null,
   name?: ModelStringInput | null,
-  not?: ModelTodoConditionInput | null,
-  or?: Array< ModelTodoConditionInput | null > | null,
+  phone?: ModelStringInput | null,
+  station?: ModelStringInput | null,
+  time?: ModelStringInput | null,
+  url?: ModelStringInput | null,
+  and?: Array< ModelStudioTableConditionInput | null > | null,
+  or?: Array< ModelStudioTableConditionInput | null > | null,
+  not?: ModelStudioTableConditionInput | null,
 };
 
 export type ModelStringInput = {
-  attributeExists?: boolean | null,
-  attributeType?: ModelAttributeTypes | null,
-  beginsWith?: string | null,
-  between?: Array< string | null > | null,
-  contains?: string | null,
+  ne?: string | null,
   eq?: string | null,
-  ge?: string | null,
-  gt?: string | null,
   le?: string | null,
   lt?: string | null,
-  ne?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
   notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  attributeExists?: boolean | null,
+  attributeType?: ModelAttributeTypes | null,
   size?: ModelSizeInput | null,
 };
 
 export enum ModelAttributeTypes {
-  _null = "_null",
   binary = "binary",
   binarySet = "binarySet",
   bool = "bool",
@@ -65,350 +57,201 @@ export enum ModelAttributeTypes {
   numberSet = "numberSet",
   string = "string",
   stringSet = "stringSet",
+  _null = "_null",
 }
 
 
 export type ModelSizeInput = {
-  between?: Array< number | null > | null,
+  ne?: number | null,
   eq?: number | null,
-  ge?: number | null,
-  gt?: number | null,
   le?: number | null,
   lt?: number | null,
-  ne?: number | null,
+  ge?: number | null,
+  gt?: number | null,
+  between?: Array< number | null > | null,
 };
 
-export type CreateTodoInput = {
-  _version?: number | null,
-  description?: string | null,
-  id?: string | null,
-  name: string,
-};
-
-export type Todo = {
-  __typename: "Todo",
+export type StudioTable = {
+  __typename: "StudioTable",
+  address?: string | null,
+  erea?: Array< string | null > | null,
+  fee?: string | null,
+  group?: string | null,
+  id?: string,
+  name?: string | null,
+  phone?: string | null,
+  station?: string | null,
+  time?: string | null,
+  url?: string | null,
+  _version?: number,
   _deleted?: boolean | null,
   _lastChangedAt?: number,
-  _version?: number,
   createdAt?: string,
-  description?: string | null,
-  id?: string,
-  name?: string,
   updatedAt?: string,
 };
 
-export type DeleteStudioInput = {
-  id: string,
-};
-
-export type DeleteTodoInput = {
-  _version?: number | null,
-  id: string,
-};
-
-export type UpdateStudioInput = {
+export type UpdateStudioTableInput = {
   address?: string | null,
   erea?: Array< string | null > | null,
   fee?: string | null,
   group?: string | null,
   id: string,
   name?: string | null,
-  number_rooms?: string | null,
   phone?: string | null,
   station?: string | null,
   time?: string | null,
   url?: string | null,
-};
-
-export type UpdateTodoInput = {
   _version?: number | null,
-  description?: string | null,
+};
+
+export type DeleteStudioTableInput = {
   id: string,
-  name?: string | null,
+  _version?: number | null,
 };
 
-export type TableStudioFilterInput = {
-  address?: TableStringFilterInput | null,
-  erea?: TableStringFilterInput | null,
-  fee?: TableStringFilterInput | null,
-  group?: TableStringFilterInput | null,
-  id?: TableIDFilterInput | null,
-  name?: TableStringFilterInput | null,
-  number_rooms?: TableStringFilterInput | null,
-  phone?: TableStringFilterInput | null,
-  station?: TableStringFilterInput | null,
-  time?: TableStringFilterInput | null,
-  url?: TableStringFilterInput | null,
-};
-
-export type TableStringFilterInput = {
-  beginsWith?: string | null,
-  between?: Array< string | null > | null,
-  contains?: string | null,
-  eq?: string | null,
-  ge?: string | null,
-  gt?: string | null,
-  le?: string | null,
-  lt?: string | null,
-  ne?: string | null,
-  notContains?: string | null,
-};
-
-export type TableIDFilterInput = {
-  beginsWith?: string | null,
-  between?: Array< string | null > | null,
-  contains?: string | null,
-  eq?: string | null,
-  ge?: string | null,
-  gt?: string | null,
-  le?: string | null,
-  lt?: string | null,
-  ne?: string | null,
-  notContains?: string | null,
-};
-
-export type StudioConnection = {
-  __typename: "StudioConnection",
-  items?:  Array<Studio | null > | null,
-  nextToken?: string | null,
-};
-
-export type ModelTodoFilterInput = {
-  and?: Array< ModelTodoFilterInput | null > | null,
-  description?: ModelStringInput | null,
+export type ModelStudioTableFilterInput = {
+  address?: ModelStringInput | null,
+  erea?: ModelStringInput | null,
+  fee?: ModelStringInput | null,
+  group?: ModelStringInput | null,
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
-  not?: ModelTodoFilterInput | null,
-  or?: Array< ModelTodoFilterInput | null > | null,
+  phone?: ModelStringInput | null,
+  station?: ModelStringInput | null,
+  time?: ModelStringInput | null,
+  url?: ModelStringInput | null,
+  and?: Array< ModelStudioTableFilterInput | null > | null,
+  or?: Array< ModelStudioTableFilterInput | null > | null,
+  not?: ModelStudioTableFilterInput | null,
 };
 
 export type ModelIDInput = {
-  attributeExists?: boolean | null,
-  attributeType?: ModelAttributeTypes | null,
-  beginsWith?: string | null,
-  between?: Array< string | null > | null,
-  contains?: string | null,
+  ne?: string | null,
   eq?: string | null,
-  ge?: string | null,
-  gt?: string | null,
   le?: string | null,
   lt?: string | null,
-  ne?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
   notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  attributeExists?: boolean | null,
+  attributeType?: ModelAttributeTypes | null,
   size?: ModelSizeInput | null,
 };
 
-export type ModelTodoConnection = {
-  __typename: "ModelTodoConnection",
-  items?:  Array<Todo | null > | null,
+export type ModelStudioTableConnection = {
+  __typename: "ModelStudioTableConnection",
+  items?:  Array<StudioTable | null > | null,
   nextToken?: string | null,
   startedAt?: number | null,
 };
 
-export type CreateStudioMutationVariables = {
-  input?: CreateStudioInput,
+export type CreateStudioTableMutationVariables = {
+  input?: CreateStudioTableInput,
+  condition?: ModelStudioTableConditionInput | null,
 };
 
-export type CreateStudioMutation = {
-  createStudio?:  {
-    __typename: "Studio",
+export type CreateStudioTableMutation = {
+  createStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type CreateTodoMutationVariables = {
-  condition?: ModelTodoConditionInput | null,
-  input?: CreateTodoInput,
-};
-
-export type CreateTodoMutation = {
-  createTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeleteStudioMutationVariables = {
-  input?: DeleteStudioInput,
+export type UpdateStudioTableMutationVariables = {
+  input?: UpdateStudioTableInput,
+  condition?: ModelStudioTableConditionInput | null,
 };
 
-export type DeleteStudioMutation = {
-  deleteStudio?:  {
-    __typename: "Studio",
+export type UpdateStudioTableMutation = {
+  updateStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type DeleteTodoMutationVariables = {
-  condition?: ModelTodoConditionInput | null,
-  input?: DeleteTodoInput,
-};
-
-export type DeleteTodoMutation = {
-  deleteTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateStudioMutationVariables = {
-  input?: UpdateStudioInput,
+export type DeleteStudioTableMutationVariables = {
+  input?: DeleteStudioTableInput,
+  condition?: ModelStudioTableConditionInput | null,
 };
 
-export type UpdateStudioMutation = {
-  updateStudio?:  {
-    __typename: "Studio",
+export type DeleteStudioTableMutation = {
+  deleteStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type UpdateTodoMutationVariables = {
-  condition?: ModelTodoConditionInput | null,
-  input?: UpdateTodoInput,
-};
-
-export type UpdateTodoMutation = {
-  updateTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };
 
-export type GetStudioQueryVariables = {
-  id?: string,
-};
-
-export type GetStudioQuery = {
-  getStudio?:  {
-    __typename: "Studio",
-    address?: string | null,
-    erea?: Array< string | null > | null,
-    fee?: string | null,
-    group?: string | null,
-    id: string,
-    name?: string | null,
-    number_rooms?: string | null,
-    phone?: string | null,
-    station?: string | null,
-    time?: string | null,
-    url?: string | null,
-  } | null,
-};
-
-export type GetTodoQueryVariables = {
-  id?: string,
-};
-
-export type GetTodoQuery = {
-  getTodo?:  {
-    __typename: "Todo",
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-    _version: number,
-    createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type ListStudiosQueryVariables = {
-  filter?: TableStudioFilterInput | null,
+export type SyncStudioTablesQueryVariables = {
+  filter?: ModelStudioTableFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
+  lastSync?: number | null,
 };
 
-export type ListStudiosQuery = {
-  listStudios?:  {
-    __typename: "StudioConnection",
+export type SyncStudioTablesQuery = {
+  syncStudioTables?:  {
+    __typename: "ModelStudioTableConnection",
     items?:  Array< {
-      __typename: "Studio",
+      __typename: "StudioTable",
       address?: string | null,
       erea?: Array< string | null > | null,
       fee?: string | null,
       group?: string | null,
       id: string,
       name?: string | null,
-      number_rooms?: string | null,
       phone?: string | null,
       station?: string | null,
       time?: string | null,
       url?: string | null,
-    } | null > | null,
-    nextToken?: string | null,
-  } | null,
-};
-
-export type ListTodosQueryVariables = {
-  filter?: ModelTodoFilterInput | null,
-  limit?: number | null,
-  nextToken?: string | null,
-};
-
-export type ListTodosQuery = {
-  listTodos?:  {
-    __typename: "ModelTodoConnection",
-    items?:  Array< {
-      __typename: "Todo",
+      _version: number,
       _deleted?: boolean | null,
       _lastChangedAt: number,
-      _version: number,
       createdAt: string,
-      description?: string | null,
-      id: string,
-      name: string,
       updatedAt: string,
     } | null > | null,
     nextToken?: string | null,
@@ -416,25 +259,56 @@ export type ListTodosQuery = {
   } | null,
 };
 
-export type SyncTodosQueryVariables = {
-  filter?: ModelTodoFilterInput | null,
-  lastSync?: number | null,
+export type GetStudioTableQueryVariables = {
+  id?: string,
+};
+
+export type GetStudioTableQuery = {
+  getStudioTable?:  {
+    __typename: "StudioTable",
+    address?: string | null,
+    erea?: Array< string | null > | null,
+    fee?: string | null,
+    group?: string | null,
+    id: string,
+    name?: string | null,
+    phone?: string | null,
+    station?: string | null,
+    time?: string | null,
+    url?: string | null,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListStudioTablesQueryVariables = {
+  filter?: ModelStudioTableFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type SyncTodosQuery = {
-  syncTodos?:  {
-    __typename: "ModelTodoConnection",
+export type ListStudioTablesQuery = {
+  listStudioTables?:  {
+    __typename: "ModelStudioTableConnection",
     items?:  Array< {
-      __typename: "Todo",
+      __typename: "StudioTable",
+      address?: string | null,
+      erea?: Array< string | null > | null,
+      fee?: string | null,
+      group?: string | null,
+      id: string,
+      name?: string | null,
+      phone?: string | null,
+      station?: string | null,
+      time?: string | null,
+      url?: string | null,
+      _version: number,
       _deleted?: boolean | null,
       _lastChangedAt: number,
-      _version: number,
       createdAt: string,
-      description?: string | null,
-      id: string,
-      name: string,
       updatedAt: string,
     } | null > | null,
     nextToken?: string | null,
@@ -442,119 +316,65 @@ export type SyncTodosQuery = {
   } | null,
 };
 
-export type OnCreateStudioSubscriptionVariables = {
-  erea?: Array< string | null > | null,
-  group?: string | null,
-  id?: string | null,
-  name?: string | null,
-  phone?: string | null,
-};
-
-export type OnCreateStudioSubscription = {
-  onCreateStudio?:  {
-    __typename: "Studio",
+export type OnCreateStudioTableSubscription = {
+  onCreateStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type OnCreateTodoSubscription = {
-  onCreateTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnDeleteStudioSubscriptionVariables = {
-  erea?: Array< string | null > | null,
-  group?: string | null,
-  id?: string | null,
-  name?: string | null,
-  phone?: string | null,
-};
-
-export type OnDeleteStudioSubscription = {
-  onDeleteStudio?:  {
-    __typename: "Studio",
+export type OnUpdateStudioTableSubscription = {
+  onUpdateStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type OnDeleteTodoSubscription = {
-  onDeleteTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnUpdateStudioSubscriptionVariables = {
-  erea?: Array< string | null > | null,
-  group?: string | null,
-  id?: string | null,
-  name?: string | null,
-  phone?: string | null,
-};
-
-export type OnUpdateStudioSubscription = {
-  onUpdateStudio?:  {
-    __typename: "Studio",
+export type OnDeleteStudioTableSubscription = {
+  onDeleteStudioTable?:  {
+    __typename: "StudioTable",
     address?: string | null,
     erea?: Array< string | null > | null,
     fee?: string | null,
     group?: string | null,
     id: string,
     name?: string | null,
-    number_rooms?: string | null,
     phone?: string | null,
     station?: string | null,
     time?: string | null,
     url?: string | null,
-  } | null,
-};
-
-export type OnUpdateTodoSubscription = {
-  onUpdateTodo?:  {
-    __typename: "Todo",
+    _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-    _version: number,
     createdAt: string,
-    description?: string | null,
-    id: string,
-    name: string,
     updatedAt: string,
   } | null,
 };

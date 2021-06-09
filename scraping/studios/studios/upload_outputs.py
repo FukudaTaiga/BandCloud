@@ -17,6 +17,6 @@ def upload_to_dynamodb(file_name):
 
 if __name__ == "__main__":
     dynamodb = boto3.resource('dynamodb')
-    table    = dynamodb.Table('StudioTable')
+    table    = dynamodb.Table('StudioTable-nkbsw5ci6ndrpgz7gvawqp4dyq-dev')
 
     upload_to_dynamodb("outputs/sagasuta_items.jsonl")

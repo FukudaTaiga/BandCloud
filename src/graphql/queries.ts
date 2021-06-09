@@ -2,44 +2,19 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getStudio = /* GraphQL */ `
-  query GetStudio($id: ID!) {
-    getStudio(id: $id) {
-      address
-      erea
-      fee
-      group
-      id
-      name
-      number_rooms
-      phone
-      station
-      time
-      url
-    }
-  }
-`;
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
-      _deleted
-      _lastChangedAt
-      _version
-      createdAt
-      description
-      id
-      name
-      updatedAt
-    }
-  }
-`;
-export const listStudios = /* GraphQL */ `
-  query ListStudios(
-    $filter: TableStudioFilterInput
+export const syncStudioTables = /* GraphQL */ `
+  query SyncStudioTables(
+    $filter: ModelStudioTableFilterInput
     $limit: Int
     $nextToken: String
+    $lastSync: AWSTimestamp
   ) {
-    listStudios(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    syncStudioTables(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
       items {
         address
         erea
@@ -47,31 +22,14 @@ export const listStudios = /* GraphQL */ `
         group
         id
         name
-        number_rooms
         phone
         station
         time
         url
-      }
-      nextToken
-    }
-  }
-`;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
+        _version
         _deleted
         _lastChangedAt
-        _version
         createdAt
-        description
-        id
-        name
         updatedAt
       }
       nextToken
@@ -79,27 +37,49 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const syncTodos = /* GraphQL */ `
-  query SyncTodos(
-    $filter: ModelTodoFilterInput
-    $lastSync: AWSTimestamp
+export const getStudioTable = /* GraphQL */ `
+  query GetStudioTable($id: ID!) {
+    getStudioTable(id: $id) {
+      address
+      erea
+      fee
+      group
+      id
+      name
+      phone
+      station
+      time
+      url
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listStudioTables = /* GraphQL */ `
+  query ListStudioTables(
+    $filter: ModelStudioTableFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    syncTodos(
-      filter: $filter
-      lastSync: $lastSync
-      limit: $limit
-      nextToken: $nextToken
-    ) {
+    listStudioTables(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        _deleted
-        _lastChangedAt
-        _version
-        createdAt
-        description
+        address
+        erea
+        fee
+        group
         id
         name
+        phone
+        station
+        time
+        url
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
         updatedAt
       }
       nextToken

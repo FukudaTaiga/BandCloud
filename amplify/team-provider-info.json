@@ -11,5 +11,18 @@
       "StackId": "arn:aws:cloudformation:ap-northeast-1:176446008360:stack/amplify-bandcloud-dev-113712/1e1a5ac0-bd02-11eb-93f7-064a883b3c10",
       "AmplifyAppId": "d31tchq6071i42"
     }
+  },
+  "new": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bandcloud-new-113348-authRole",
+      "UnauthRoleArn": "arn:aws:iam::176446008360:role/amplify-bandcloud-new-113348-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::176446008360:role/amplify-bandcloud-new-113348-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-bandcloud-new-113348-deployment",
+      "UnauthRoleName": "amplify-bandcloud-new-113348-unauthRole",
+      "StackName": "amplify-bandcloud-new-113348",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:176446008360:stack/amplify-bandcloud-new-113348/1f6c0020-c8cb-11eb-a52a-0a62c8869167",
+      "AmplifyAppId": "d31tchq6071i42"
+    }
   }
 }
